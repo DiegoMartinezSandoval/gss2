@@ -144,7 +144,13 @@ The t-value is 4.598. The degrees of freedom is 102.27. The p-value is 0.0000122
 
 Determine if a persons performance on the wordsum test (WORDSUM) is independent of their level of schooling (DEGREE).
 
+$H_0$ There is no difference between the average score on the WORDSUM test and level of schooling DEGREE  
+
+$H_A$ There is a significant difference in average score on the WORDSUM test between at least two levels of DEGREE 
+
 ## Methods
+
+We are explaining that there is a significant difference in average score on WORDSUM tests between at least two levels of degree. We will be examining a categorical variable cultivation. We will also use a T-test to compare the average score on the WORDSUM test between at least two levels of degree. The P-value will determine if whether or not we're correct: it has to be lower than .05. The WORDSUM is numerical. Degree is categorical.
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
@@ -156,13 +162,33 @@ Determine if a persons performance on the wordsum test (WORDSUM) is independent 
 
 #### Graphical Descriptive Results
 
+```{r}
+boxplot(WORDSUM~DEGREE,data=GSSdata)
+```
+
+The median for the bachelor degree is a bit higher than the other two medians. 
+The bachelor degree median is about 10, high school degree median is about 9, and the LT high school median is about 8. The bachelor degree box plot doesn't have any outliers, highschool degree has 2 outliers below it's minimum, LT highschool degree has 1 outlier below the minimum & one above the max. So far based off of this box plot, the bachelor degree (categorical) has a higher median for the WORDSUM score (numerical) out of all 3 degrees. 
+
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 #### Numerical Descriptive Results
 
+```{r}
+favstats(WORDSUM~DEGREE,data=GSSdata)
+```
+
+The median for a bachelor degree is 10, 11 for a graduate, 9 for a high school degree, 10 for a junior college, and a 7 for LT high school. The max is the same for 4 out of the 5 degrees (11 for LT). The mean is slightly different for all of them. Overall, the graduate has a higher median and mean. While having an equal maximum. It's the standout and has the highest average out of all the degrees. LT high school appears to have the lowest median, maximum, and average. 
+
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ### Inferential Results
+
+```{r}
+model1 <- aov(WORDSUM~DEGREE,data=GSSdata)
+summary.aov(model1)
+```
+
+We can infer that the P-value is .000236. From the AOV, we can reject the null hypothesis due to how small the p-value is. If the p-value is not .05 or higher, we can reject it due to how small the chances are. In every problem, we know we're accurate when we can reject the null hypothesis. There is a difference between degrees and how they score (on average) in the WORDSUM. The graduates clearly pull off a greater average than any of the 5 degrees provided with data. 
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 

@@ -150,7 +150,7 @@ $H_A$ There is a significant difference in average score on the WORDSUM test bet
 
 ## Methods
 
-We are explaining that there is a significant difference in average score on WORDSUM tests between at least two levels of degree. We will be examining a categorical variable cultivation. We will also use a T-test to compare the average score on the WORDSUM test between at least two levels of degree. The P-value will determine if whether or not we're correct: it has to be lower than .05. The WORDSUM is numerical. Degree is categorical. 
+We are explaining that there is a significant difference in average score on WORDSUM tests between at least two levels of degree. We will be examining a categorical variable cultivation. We will also use a T-test to compare the average score on the WORDSUM test between at least two levels of degree. The P-value will determine if whether or not we're correct: it has to be lower than .05. The WORDSUM is numerical. Degree is categorical.
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 

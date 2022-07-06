@@ -174,7 +174,7 @@ The bachelor degree median is about 10, high school degree median is about 9, an
 #### Numerical Descriptive Results       
 
 ```{r}
-favstats(WORDSUM~DEGREE,data=GSSdata)
+favstats(WORDSUM~DEGREE,data=GSSdata)  
 ```
 
 The median for a bachelor degree is 10, 11 for a graduate, 9 for a high school degree, 10 for a junior college, and a 7 for LT high school. The max is the same for 4 out of the 5 degrees (11 for LT). The mean is slightly different for all of them. Overall, the graduate has a higher median and mean. While having an equal maximum. It's the standout and has the highest average out of all the degrees. LT high school appears to have the lowest median, maximum, and average. 

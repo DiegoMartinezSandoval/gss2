@@ -27,6 +27,7 @@ The data in the dataframe GSSdata is from the 2018 General Social Survey. The fi
 First question - Is opinion on the death penalty (CAPPUN) independent of gun ownership (OWNGUN)?
 
 
+
 ## Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->

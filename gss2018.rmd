@@ -128,7 +128,7 @@ The voted category has a mean of 15.625 and a median of 15. The did not vote cat
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
-### Inferential Results
+### Inferential Results  
 
 ```{r}
 t.test(EDUC~VOTE16,data=GSSdata)
